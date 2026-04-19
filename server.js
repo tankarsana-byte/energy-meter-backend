@@ -6,7 +6,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-let latestData = {};
+let latestData = {
+  voltage: 230,
+  current: 2.5,
+  power: 575,
+  energy: 120
+};
 
 // Test route
 app.get("/", (req, res) => {
